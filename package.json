@@ -1,0 +1,26 @@
+{
+  "name": "js-gap",
+  "version": "1.0.0",
+  "description": "Typescript Gapped Buffer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terrencecrowley/js-gap.git"
+  },
+  "keywords": [
+    "Typescript",
+    "GappedBuffer"
+  ],
+  "author": "Terry Crowley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terrencecrowley/js-gap/issues"
+  },
+  "homepage": "https://github.com/terrencecrowley/js-gap#readme",
+  "devDependencies": {
+    "ts-loader": "^1.0.0"
+  }
+}

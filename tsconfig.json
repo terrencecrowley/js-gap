@@ -1,0 +1,15 @@
+{
+	"files": [
+		"tests.ts",
+		"src/gap.ts"
+	],
+
+	"compilerOptions": {
+		//"noImplicitlyAny": true,
+		"target": "es5",
+		"module": "commonjs",
+		"types": [
+			"node"
+		]
+	}
+}
