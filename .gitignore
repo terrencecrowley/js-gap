@@ -3,6 +3,9 @@ logs
 *.log
 npm-debug.log*
 
+# Editors
+*.swp
+
 # Runtime data
 pids
 *.pid
