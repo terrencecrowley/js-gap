@@ -10,12 +10,12 @@ fs.readdirSync('node_modules')
 		nodeModules[mod] = 'commonjs ' + mod;
 });
 
-var serverConfig = {
+var testConfig = {
 	entry: './tests.ts',
 	target: 'node',
 	output: {
 		path: './dist',
-		filename: 'server.bundle.js'
+		filename: 'test.bundle.js'
 	},
 	externals: nodeModules,
 
@@ -38,4 +38,32 @@ var serverConfig = {
 	}
 };
 
-module.exports = [ serverConfig ];
+var libConfig = {
+	entry: './lib/gap.ts',
+	target: 'node',
+	output: {
+		path: './dist/lib',
+		filename: 'gap.js'
+	},
+	externals: nodeModules,
+
+	// Enable source maps
+	devtool: "source-map",
+
+	resolve: {
+		extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+	},
+
+	module: {
+		loaders: [
+			{ test: /\.tsx?$/, loader: 'ts-loader' },
+			{ test: /\.json$/, loader: 'json-loader' }
+		],
+
+		preLoaders: [
+			{ test: /\.js$/, loader: "source-map-loader" }
+		]
+	}
+};
+
+module.exports = [ testConfig, libConfig ];

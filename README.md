@@ -15,4 +15,7 @@ to a standard Array.
 
 A gapped buffer's performance can degrade if the gap "thrashes" - that is if inserts and deletes
 exhibit no locality. Of course, this is no worse than a standard Array but might be worse than
-more complex linked data structures.
+more complex linked data structures that are better tuned for that usage.
+
+The gapped buffer has operations that match semantics and signature of default Array operations
+to make replacement straightforward.
