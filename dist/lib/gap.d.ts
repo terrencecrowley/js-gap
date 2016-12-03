@@ -1,0 +1,36 @@
+export declare type ForEachFunction = (v: any, i?: number, buf?: any) => void;
+export declare type MapFunction = (v: any, i?: number, buf?: any) => any;
+export declare type FilterFunction = (v: any, i?: number, buf?: any) => boolean;
+export declare class GapBuffer<ValueType> {
+    private _a;
+    private _len;
+    private _max;
+    private _gap;
+    constructor(mx?: number);
+    readonly length: number;
+    readonly capacity: number;
+    getAt(i: number): ValueType;
+    setArrayAt(i: number, a: Array<ValueType>): void;
+    setAt(i: number, ...rest: Array<ValueType>): void;
+    insertArrayAt(i: number, a: Array<ValueType>): number;
+    insertAt(i: number, ...rest: Array<ValueType>): number;
+    reverse(): void;
+    push(o: ValueType): void;
+    pop(): ValueType;
+    shift(): ValueType;
+    unshift(...rest: Array<ValueType>): number;
+    deleteAt(i: number, n?: number): ValueType;
+    empty(): void;
+    splice(i: number, nDel?: number, ...rest: Array<ValueType>): Array<ValueType>;
+    slice(b?: number, e?: number): GapBuffer<ValueType>;
+    shrink(): void;
+    forEach(f: ForEachFunction, thisArg?: any): void;
+    map(f: MapFunction, thisArg?: any): GapBuffer<ValueType>;
+    filter(f: FilterFunction, thisArg?: any): GapBuffer<ValueType>;
+    fill(o: ValueType): void;
+    reserve(total: number): void;
+    private makeMoreRoom(incr);
+    private makeTotalRoom(total);
+    private setGap(i);
+    private gapEnd();
+}

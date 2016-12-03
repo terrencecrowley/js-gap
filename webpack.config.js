@@ -14,7 +14,7 @@ var testConfig = {
 	entry: './tests.ts',
 	target: 'node',
 	output: {
-		path: './dist',
+		path: './testdist',
 		filename: 'test.bundle.js'
 	},
 	externals: nodeModules,
