@@ -39,11 +39,15 @@ var testConfig = {
 };
 
 var libConfig = {
-	entry: './lib/gap.ts',
-	target: 'node',
+	entry:
+		{
+			library: './lib/js-gap.ts'
+		},
 	output: {
-		path: './dist/lib',
-		filename: 'gap.js'
+		library: 'js-gap',
+		libraryTarget: 'umd',
+		path: './dist',
+		filename: 'js-gap.js'
 	},
 	externals: nodeModules,
 

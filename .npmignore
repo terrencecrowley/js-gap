@@ -1,2 +1,3 @@
 testdist
 tests.ts
+dist/tests.d.ts

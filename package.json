@@ -1,9 +1,9 @@
 {
   "name": "@terrencecrowley/js-gap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gapped Buffer",
-  "main": "./dist/lib/gap.js",
-  "types": "./dist/lib/gap.d.ts",
+  "main": "./dist/lib/js-gap.js",
+  "types": "./dist/lib/js-gap.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

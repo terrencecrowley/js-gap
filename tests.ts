@@ -1,4 +1,4 @@
-import * as GB from "./lib/gap";
+import * as GB from "./lib/js-gap";
 
 let hrstart = process.hrtime();
 let hrend = process.hrtime(hrstart);
